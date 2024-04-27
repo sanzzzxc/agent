@@ -1,0 +1,71 @@
+{
+  "name": "724d5c65-ba4e-4d7e-a1d6-7359ec2509f8",
+  "displayName": "LLM based virtual user test: product-search:unrelated-item",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "do you have any cars for sale?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "sure, what watches do you have?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1702418172,
+    "nanos": 223461000
+  },
+  "testConfig": {
+    "useCaseDescription": "You are a customer talking to the agent, and you want to buy a basketball."
+  },
+  "expectedTestCaseResult": {
+    "expectedActions": [ {
+      "playbookInvocation": {
+        "playbook": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/playbooks/cfc017ba-c3e3-450a-9daf-995f15c1beb2"
+      }
+    }, {
+      "toolUse": {
+        "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/06f50924-ac24-45e1-8b23-2804c0166702",
+        "action": "get_items",
+        "inputParameters": [ {
+          "name": "requestBody",
+          "value": {
+            "item": ""
+          }
+        } ],
+        "outputParameters": [ {
+          "name": "200",
+          "value": {
+            "results": [ "" ]
+          }
+        } ],
+        "inputActionParameters": {
+          "requestBody": {
+            "item": ""
+          }
+        },
+        "outputActionParameters": {
+          "200": {
+            "results": [ "" ]
+          }
+        }
+      }
+    } ]
+  },
+  "languageCode": "en"
+}

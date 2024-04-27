@@ -1,0 +1,115 @@
+{
+  "name": "7b00f1d8-2e5a-4982-abab-32dbd1c491c0",
+  "actions": [ {
+    "toolUse": {
+      "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/06f50924-ac24-45e1-8b23-2804c0166702",
+      "action": "get_items",
+      "inputParameters": [ {
+        "name": "get_items input",
+        "value": {
+          "item": "phone"
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "get_items output",
+        "value": {
+          "items": [ "Google Phone Pixel 8", "Google Phone Pixel 7" ],
+          "status": "success"
+        }
+      } ],
+      "inputActionParameters": {
+        "get_items input": {
+          "item": "phone"
+        }
+      },
+      "outputActionParameters": {
+        "get_items output": {
+          "items": [ "Google Phone Pixel 8", "Google Phone Pixel 7" ],
+          "status": "success"
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "We have the Google Phone Pixel 8 and Google Phone Pixel 7. Would you like to purchase one of these?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Google Phone Pixel 7"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "add_to_shopping_cart",
+      "inputParameters": [ {
+        "name": "add_to_shopping_cart input",
+        "value": {
+          "item": "Google Phone Pixel 7",
+          "quantity": 1
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "add_to_shopping_cart output",
+        "value": {
+          "shopping_cart": {
+            "Google Phone Pixel 7": 1
+          },
+          "status": "success"
+        }
+      } ],
+      "inputActionParameters": {
+        "add_to_shopping_cart input": {
+          "item": "Google Phone Pixel 7",
+          "quantity": 1
+        }
+      },
+      "outputActionParameters": {
+        "add_to_shopping_cart output": {
+          "shopping_cart": {
+            "Google Phone Pixel 7": 1
+          },
+          "status": "success"
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "You got it. I've added one Google Phone Pixel 7 to your cart. Anything else?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "That's it, let's place the order."
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/playbooks/1d6add18-5791-449c-9839-21bd963798bc",
+      "playbookInput": {
+      
+      },
+      "playbookOutput": {
+        "state": "OK"
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The user want to buy a phone.",
+    "parameters": [ {
+      "name": "item",
+      "value": {
+        "phone": 1
+      }
+    } ],
+    "actionParameters": {
+      "item": {
+        "phone": 1
+      }
+    }
+  },
+  "playbookOutput": {
+    "state": "OK"
+  },
+  "displayName": "Buy a phone",
+  "retrievalStrategy": "STATIC",
+  "conversationState": "OUTPUT_STATE_OK"
+}

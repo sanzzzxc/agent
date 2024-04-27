@@ -1,0 +1,9 @@
+{
+  "name": "d2ae710d-15d7-46d7-9458-8c9f00506234",
+  "displayName": "Place Order",
+  "description": "Place order for the customer.",
+  "openApiSpec": {
+  
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

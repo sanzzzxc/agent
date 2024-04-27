@@ -1,0 +1,31 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Place order API
+  description: Place an order.
+servers:
+- url: https://test-server-rsl6.onrender.com
+paths:
+  /place_order:
+    post:
+      operationId: place_order
+      summary: Place an order of the items in the shopping cart.
+      parameters:
+      - name: session_id
+        in: query
+        description: ID of session to return
+        required: true
+        schema:
+          $ref: '@dialogflow/sessionId'
+      responses:
+        '200':
+          description: Successfully got results (may be empty)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: string

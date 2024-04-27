@@ -1,0 +1,75 @@
+{
+  "name": "50d05bee-f220-49ff-b5ba-29026af3f30d",
+  "displayName": "LLM based virtual user test: product search",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "Hi, I'm your Google shopping assistant. I can help you search for items and place orders. How can I help you today?" ]
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I want to buy a phone"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "We have the Google Phone Pixel 8 and Google Phone Pixel 7. Would you like to purchase one of these?" ]
+      } ]
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1704477524,
+    "nanos": 596314000
+  },
+  "testConfig": {
+    "useCaseDescription": "You are a customer talking to the agent, and you want to buy a watch."
+  },
+  "expectedTestCaseResult": {
+    "expectedActions": [ {
+      "toolUse": {
+        "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/06f50924-ac24-45e1-8b23-2804c0166702",
+        "action": "get_items",
+        "inputParameters": [ {
+          "name": "requestBody",
+          "value": {
+            "item": "phone"
+          }
+        } ],
+        "outputParameters": [ {
+          "name": "200",
+          "value": {
+            "items": [ "Google Phone Pixel 8", "Google Phone Pixel 7" ],
+            "status": "success"
+          }
+        } ],
+        "inputActionParameters": {
+          "requestBody": {
+            "item": "phone"
+          }
+        },
+        "outputActionParameters": {
+          "200": {
+            "items": [ "Google Phone Pixel 8", "Google Phone Pixel 7" ],
+            "status": "success"
+          }
+        }
+      }
+    } ]
+  },
+  "languageCode": "en"
+}

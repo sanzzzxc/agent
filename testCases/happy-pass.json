@@ -1,0 +1,305 @@
+{
+  "name": "6dc5b609-4d50-48e0-8e8f-a099564f6901",
+  "displayName": "happy-pass",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "Hi, I'm your Google shopping assistant. I can help you search for items and place orders. How can I help you today?" ]
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I want to buy a phone"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "We have the Google Phone Pixel 8 and Google Phone Pixel 7. Would you like to purchase one of these?" ]
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Google Phone Pixel 7"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "You got it. I've added one Google Phone Pixel 7 to your cart. Anything else?" ]
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "That's it, let's place the order."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "Hi, how can I help you?" ]
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I want to place the order"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "I can see you have a Google Phone Pixel 7 in your cart, is that correct?" ]
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "That's correct."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "Cool, please provide your credit card number, expiration date and cvv number." ]
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Sure, the credit card number is 1111222233334444, the expiration date is 11/27, and the cvv number is 000."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "Thanks, just to confirm, the credit card number is 1111222233334444, the expiration date is 11/27, and the cvv number is 000. Is that correct?" ]
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "That's correct."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "Great, please provide your shipping address, including the zip code." ]
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Sure, the shipping address is 111 Test St. Seattle, WA, 98111"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "Thanks, the shipping address is 111 Test St. Seattle, WA, 98111. Is that correct?" ]
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "Okay, I've placed an order for you. Your confirmation number is CZX0CVIX." ]
+      }, {
+        "text": [ "Your order has been placed. Your order number is 1234567890. You will receive an email confirmation shortly." ]
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "You're welcome! Is there anything else I can help you with?" ]
+      } ]
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "That's it"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ]
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1704429478,
+    "nanos": 812900000
+  },
+  "expectedTestCaseResult": {
+    "expectedActions": [ {
+      "toolUse": {
+        "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/06f50924-ac24-45e1-8b23-2804c0166702",
+        "action": "get_items",
+        "inputParameters": [ {
+          "name": "requestBody",
+          "value": {
+            "item": "phone"
+          }
+        } ],
+        "outputParameters": [ {
+          "name": "200",
+          "value": {
+            "items": [ "Google Phone Pixel 8", "Google Phone Pixel 7" ],
+            "status": "success"
+          }
+        } ],
+        "inputActionParameters": {
+          "requestBody": {
+            "item": "phone"
+          }
+        },
+        "outputActionParameters": {
+          "200": {
+            "items": [ "Google Phone Pixel 8", "Google Phone Pixel 7" ],
+            "status": "success"
+          }
+        }
+      }
+    }, {
+      "toolUse": {
+        "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+        "action": "add_to_shopping_cart",
+        "inputParameters": [ {
+          "name": "requestBody",
+          "value": {
+            "item": "Google Phone Pixel 7",
+            "quantity": 1
+          }
+        } ],
+        "outputParameters": [ {
+          "name": "200",
+          "value": {
+            "shopping_cart": {
+              "Google Phone Pixel 7": 1
+            },
+            "status": "success"
+          }
+        } ],
+        "inputActionParameters": {
+          "requestBody": {
+            "item": "Google Phone Pixel 7",
+            "quantity": 1
+          }
+        },
+        "outputActionParameters": {
+          "200": {
+            "shopping_cart": {
+              "Google Phone Pixel 7": 1
+            },
+            "status": "success"
+          }
+        }
+      }
+    }, {
+      "toolUse": {
+        "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+        "action": "view_shopping_cart",
+        "outputParameters": [ {
+          "name": "200",
+          "value": {
+            "shopping_cart": {
+              "Google Phone Pixel 7": 1
+            },
+            "status": "success"
+          }
+        } ],
+        "outputActionParameters": {
+          "200": {
+            "shopping_cart": {
+              "Google Phone Pixel 7": 1
+            },
+            "status": "success"
+          }
+        }
+      }
+    }, {
+      "toolUse": {
+        "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/d2ae710d-15d7-46d7-9458-8c9f00506234",
+        "action": "place_order",
+        "outputParameters": [ {
+          "name": "200",
+          "value": {
+            "confirmation_number": "CZX0CVIX",
+            "shopping_cart": {
+              "Google Phone Pixel 7": 1
+            },
+            "status": "success"
+          }
+        } ],
+        "outputActionParameters": {
+          "200": {
+            "confirmation_number": "CZX0CVIX",
+            "shopping_cart": {
+              "Google Phone Pixel 7": 1
+            },
+            "status": "success"
+          }
+        }
+      }
+    } ]
+  },
+  "languageCode": "en"
+}

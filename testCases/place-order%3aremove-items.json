@@ -1,0 +1,143 @@
+{
+  "name": "1fa7d8b7-e627-4c34-9449-494d16c243a8",
+  "displayName": "place-order:remove-items",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "I'm looking for a new phone, what can you recommend?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "can I get two 7s?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "actually nevermind can you remove those?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "add a pixel 8 and a google watch"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "that's all"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1702422313,
+    "nanos": 184791000
+  },
+  "expectedTestCaseResult": {
+    "expectedActions": [ {
+      "toolUse": {
+        "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+        "action": "remove_from_shopping_cart",
+        "inputParameters": [ {
+          "name": "remove_from_shopping_cart input",
+          "value": {
+            "item": "",
+            "quantity": null
+          }
+        } ],
+        "outputParameters": [ {
+          "name": "remove_from_shopping_cart output",
+          "value": {
+            "results": [ "" ]
+          }
+        } ],
+        "inputActionParameters": {
+          "remove_from_shopping_cart input": {
+            "item": "",
+            "quantity": null
+          }
+        },
+        "outputActionParameters": {
+          "remove_from_shopping_cart output": {
+            "results": [ "" ]
+          }
+        }
+      }
+    }, {
+      "toolUse": {
+        "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+        "action": "add_to_shopping_cart",
+        "inputParameters": [ {
+          "name": "add_to_shopping_cart input",
+          "value": {
+            "item": "",
+            "quantity": null
+          }
+        } ],
+        "outputParameters": [ {
+          "name": "add_to_shopping_cart output",
+          "value": {
+            "results": [ "" ]
+          }
+        } ],
+        "inputActionParameters": {
+          "add_to_shopping_cart input": {
+            "item": "",
+            "quantity": null
+          }
+        },
+        "outputActionParameters": {
+          "add_to_shopping_cart output": {
+            "results": [ "" ]
+          }
+        }
+      }
+    } ]
+  },
+  "languageCode": "en"
+}

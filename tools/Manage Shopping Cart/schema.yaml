@@ -1,0 +1,141 @@
+openapi: 3.0.0
+info:
+  title: Shopping Cart API
+  description: API for managing shopping cart
+  version: 1.0.0
+servers:
+  - url: https://test-server-rsl6.onrender.com
+paths:
+  /add_to_shopping_cart:
+    post:
+      summary: Add item to shopping cart
+      operationId: addToShoppingCart
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                session_id:
+                  type: integer
+                item:
+                  type: string
+                quantity:
+                  type: integer
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: string
+        '400':
+          description: Missing session_id
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /remove_from_shopping_cart:
+    post:
+      summary: Remove item from shopping cart
+      operationId: removeFromShoppingCart
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                session_id:
+                  type: integer
+                item:
+                  type: string
+                quantity:
+                  type: integer
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: string
+        '400':
+          description: Missing session_id
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /view_shopping_cart:
+    post:
+      summary: View shopping cart
+      operationId: viewShoppingCart
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                session_id:
+                  type: integer
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object  # You should define the schema of the items returned by viewCart function
+        '400':
+          description: Missing session_id
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string

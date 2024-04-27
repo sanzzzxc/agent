@@ -1,0 +1,12 @@
+{
+  "fallbackSettings": {
+    "selectedPrompt": "Default"
+  },
+  "languageCode": "en",
+  "knowledgeConnectorSettings": {
+    "business": "internal",
+    "groundingSettings": {
+      "disabled": true
+    }
+  }
+}

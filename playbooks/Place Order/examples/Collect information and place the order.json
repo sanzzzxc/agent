@@ -1,0 +1,96 @@
+{
+  "name": "958dd58a-213b-4b02-b6d9-e8c54306f67c",
+  "actions": [ {
+    "toolUse": {
+      "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "view_shopping_cart",
+      "outputParameters": [ {
+        "name": "view_shopping_cart output",
+        "value": {
+          "results": [ "Google Phone Pixel 7" ]
+        }
+      } ],
+      "outputActionParameters": {
+        "view_shopping_cart output": {
+          "results": [ "Google Phone Pixel 7" ]
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I can see you have a Google Phone Pixel 7 in your cart, is that correct?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "That's correct."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Cool, please provide your credit card number, expiration date and cvv number."
+    }
+  }, {
+    "userUtterance": {
+      "text": "Sure, the credit card number is 1111222233334444, the expiration date is 11/27, and the cvv number is 000."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Thanks, just to confirm, the credit card number is 1111222233334444, the expiration date is 11/27, and the cvv number is 000. Is that correct?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "That's correct."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Great, please provide your shipping address, including the zip code."
+    }
+  }, {
+    "userUtterance": {
+      "text": "Sure, the shipping address is 111 Test St. Seattle, WA, 98111"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Thanks, the shipping address is 111 Test St. Seattle, WA, 98111. Is that correct?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Yes."
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/d2ae710d-15d7-46d7-9458-8c9f00506234",
+      "action": "place_order",
+      "outputParameters": [ {
+        "name": "place_order output",
+        "value": {
+          "confirmation_number": "6W356Z9P",
+          "shopping_cart": {
+            "Google Pixel 7": 2,
+            "Google Pixel 8": 1
+          },
+          "status": "success"
+        }
+      } ],
+      "outputActionParameters": {
+        "place_order output": {
+          "confirmation_number": "6W356Z9P",
+          "shopping_cart": {
+            "Google Pixel 7": 2,
+            "Google Pixel 8": 1
+          },
+          "status": "success"
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Okay, I've placed an order for you. Your confirmation number is 6W356Z9P."
+    }
+  } ],
+  "playbookOutput": {
+    "state": "OK"
+  },
+  "displayName": "Collect information and place the order",
+  "retrievalStrategy": "STATIC",
+  "conversationState": "OUTPUT_STATE_OK"
+}

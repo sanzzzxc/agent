@@ -1,0 +1,146 @@
+{
+  "name": "f4744fa1-ca4b-460e-8169-ee98820ffc19",
+  "actions": [ {
+    "userUtterance": {
+      "text": "Hi"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Hi, I'm your Google shopping assistant. I can help you search for items and place orders. How can I help you today?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to buy a watch"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/playbooks/cfc017ba-c3e3-450a-9daf-995f15c1beb2",
+      "playbookInput": {
+        "precedingConversationSummary": "The customer want to find a watch."
+      },
+      "playbookOutput": {
+        "state": "OK"
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/06f50924-ac24-45e1-8b23-2804c0166702",
+      "action": "get_items",
+      "inputParameters": [ {
+        "name": "input",
+        "value": {
+          "item": "watch"
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "output",
+        "value": {
+          "items": [ "Google Watch" ],
+          "status": "success"
+        }
+      } ],
+      "inputActionParameters": {
+        "input": {
+          "item": "watch"
+        }
+      },
+      "outputActionParameters": {
+        "output": {
+          "items": [ "Google Watch" ],
+          "status": "success"
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "We have the Google Watch. Would you like to purchase it?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Yes"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "add_to_shopping_cart",
+      "inputParameters": [ {
+        "name": "input",
+        "value": {
+          "item": "Google Watch",
+          "quantity": 1
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "output",
+        "value": {
+          "shopping_cart": {
+            "Google Watch": 1
+          },
+          "status": "success"
+        }
+      } ],
+      "inputActionParameters": {
+        "input": {
+          "item": "Google Watch",
+          "quantity": 1
+        }
+      },
+      "outputActionParameters": {
+        "output": {
+          "shopping_cart": {
+            "Google Watch": 1
+          },
+          "status": "success"
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "You got it. I've added one Google Watch to your cart. Anything else?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "That's it, let's place the order"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/playbooks/1d6add18-5791-449c-9839-21bd963798bc",
+      "playbookInput": {
+      
+      },
+      "playbookOutput": {
+      
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "view_shopping_cart",
+      "outputParameters": [ {
+        "name": "output",
+        "value": {
+          "shopping_cart": {
+            "Google Watch": 1
+          },
+          "status": "success"
+        }
+      } ],
+      "outputActionParameters": {
+        "output": {
+          "shopping_cart": {
+            "Google Watch": 1
+          },
+          "status": "success"
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I can see you have a Google Watch in your cart, is that correct?"
+    }
+  } ],
+  "displayName": "Transfer to place order",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_PENDING"
+}

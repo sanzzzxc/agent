@@ -1,0 +1,53 @@
+{
+  "name": "fd25887b-4eaa-455c-a058-6465c844373e",
+  "displayName": "greeting-product-search",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "I want to search for an item"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "how about a new phone"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1702418236,
+    "nanos": 212382000
+  },
+  "expectedTestCaseResult": {
+    "expectedActions": [ {
+      "playbookInvocation": {
+        "playbook": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/playbooks/cfc017ba-c3e3-450a-9daf-995f15c1beb2"
+      }
+    } ]
+  },
+  "languageCode": "en"
+}

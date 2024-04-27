@@ -1,0 +1,9 @@
+{
+  "name": "06f50924-ac24-45e1-8b23-2804c0166702",
+  "displayName": "Google Store API",
+  "description": "The REST API for the database that contains information about products sold in the Google Store.",
+  "openApiSpec": {
+  
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

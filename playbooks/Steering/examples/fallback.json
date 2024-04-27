@@ -1,0 +1,16 @@
+{
+  "name": "93cd4691-ed73-4b5b-9c63-3f85790e2afc",
+  "actions": [ {
+    "userUtterance": {
+      "text": "hi I want to book a flight"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Sorry, I can't help with that. I can help you search for products including phones, watches, and headphones. I can also help you place orders. How can I help you today?"
+    }
+  } ],
+  "displayName": "fallback",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_PENDING",
+  "languageCode": "en"
+}

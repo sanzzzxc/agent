@@ -1,0 +1,53 @@
+{
+  "name": "f8a48642-f7e9-441b-b3ec-427d151005ce",
+  "actions": [ {
+    "userUtterance": {
+      "text": "Hi"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Hi, I'm your Google shopping assistant. I can help you search for items and place orders. How can I help you today?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to buy a phone"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/playbooks/cfc017ba-c3e3-450a-9daf-995f15c1beb2",
+      "playbookInput": {
+        "precedingConversationSummary": "The customer want to find a phone.",
+        "parameters": [ {
+          "name": "item",
+          "value": {
+            "phone": 1
+          }
+        } ],
+        "actionParameters": {
+          "item": {
+            "phone": 1
+          }
+        }
+      },
+      "playbookOutput": {
+        "executionSummary": "Success",
+        "state": "OK"
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Anything I can help with?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "That's all, thanks."
+    }
+  } ],
+  "playbookOutput": {
+    "state": "OK"
+  },
+  "displayName": "Buy a phone",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_OK"
+}

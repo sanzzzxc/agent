@@ -1,0 +1,33 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Google Store API
+  description: Get all the items in Google Store.
+servers:
+- url: https://test-server-rsl6.onrender.com
+paths:
+  /get_items:
+    get:
+      operationId: get_items
+      summary: Get all the items from Google Store.
+      parameters:
+      - name: session_id
+        in: query
+        description: ID of session to return
+        required: true
+        schema:
+          $ref: '@dialogflow/sessionId'
+      responses:
+        '200':
+          description: Successfully got results (may be empty)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: string
+        '404':
+          description: Cannot reach endpoint (may be empty)

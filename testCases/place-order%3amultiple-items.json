@@ -1,0 +1,141 @@
+{
+  "name": "e5a641fe-e6c1-4ce7-931b-54a409facfaa",
+  "displayName": "place-order:multiple-items",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "I'd like to buy a new pair of headphones for my daughter"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "yes please add two of them"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "do you have any new phones?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "ok I'll take the 8"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "what's in my cart?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "yes I'm ready to check out"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1702418101,
+    "nanos": 140716000
+  },
+  "expectedTestCaseResult": {
+    "expectedActions": [ {
+      "toolUse": {
+        "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/06f50924-ac24-45e1-8b23-2804c0166702",
+        "action": "get_items",
+        "inputParameters": [ {
+          "name": "requestBody",
+          "value": {
+            "item": ""
+          }
+        } ],
+        "outputParameters": [ {
+          "name": "200",
+          "value": {
+            "results": [ "" ]
+          }
+        } ],
+        "inputActionParameters": {
+          "requestBody": {
+            "item": ""
+          }
+        },
+        "outputActionParameters": {
+          "200": {
+            "results": [ "" ]
+          }
+        }
+      }
+    }, {
+      "toolUse": {
+        "tool": "projects/artful-line-421408/locations/us-central1/agents/2a9f36fa-b48b-43c3-a982-5bcca16591a5/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+        "action": "add_to_shopping_cart",
+        "inputParameters": [ {
+          "name": "requestBody",
+          "value": {
+            "item": "",
+            "quantity": null
+          }
+        } ],
+        "outputParameters": [ {
+          "name": "200",
+          "value": {
+            "results": [ "" ]
+          }
+        } ],
+        "inputActionParameters": {
+          "requestBody": {
+            "item": "",
+            "quantity": null
+          }
+        },
+        "outputActionParameters": {
+          "200": {
+            "results": [ "" ]
+          }
+        }
+      }
+    } ]
+  },
+  "languageCode": "en"
+}
